@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/item_fruit_shape"
+    android:elevation="4dp"
+    android:layout_margin="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgFruit"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/anar_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="16dp" />
+
+    <TextView
+        android:id="@+id/txtItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="4dp"
+        android:text="انار"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtItemPrice"
+        app:layout_constraintStart_toStartOf="@+id/txtItemPrice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="12000 تومان"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/imgFruit"
+        app:layout_constraintTop_toBottomOf="@+id/txtItemName" />
+
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/basket_shape"
+        android:src="@drawable/ic_basket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.travijuu.numberpicker.library.NumberPicker
+        android:id="@+id/number_picker"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/imgFruit"
+        app:layout_constraintTop_toBottomOf="@+id/txtItemPrice"
+        app:custom_layout="@layout/number_picker_custom"
+        numberpicker:focusable="false"
+        numberpicker:max="10"
+        numberpicker:min="0"
+        numberpicker:unit="1"
+        numberpicker:value="-5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
