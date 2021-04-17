@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //new Line For Test Push
+
         ZarinPalCallback();
         init();
         initBottomNavigationView();
@@ -112,37 +114,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void zarinPalPayment() {
-//        PaymentRequest payment = ZarinPal.getPaymentRequest();
-//        //*Get Merchant Id from Zarin pal*//
-//        payment.setMerchantID("71c705f8-bd37-11e6-aa0c-000c295eb8fc");
-//        //*The price with toman = 100 toman not rial *//*
-//        payment.setAmount(100L);
-//
-//        //*Desc For : Why should pay ?*//*
-//        payment.setDescription("پرداخت جهت خرید ");
-//        payment.setCallbackURL("return://zarinpalpayment");
-//
-//        //*Create the request*//*
-//        purchase.startPayment(payment, new OnCallbackRequestPaymentListener() {
-//            @Override
-//            public void onCallbackResultPaymentRequest(int status, String authority, Uri paymentGatewayUri, Intent intent) {
-//                if (status == 100) {
-//                    startActivity(intent);
-//                } else {
-//                    Toast.makeText(MainActivity.this, "خطا در ایجاد درخواست پرداخت", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-
-
 //        PaymentRequest payment = ZarinPal.getSandboxPaymentRequest();
         PaymentRequest payment = ZarinPal.getPaymentRequest();
 
 
-        payment.setMerchantID("0739ea70-4858-11ea-89e1-000c295eb8fc");
+        payment.setMerchantID("0139ea83-4158-aswx-1234-000c295eb8fc");
         payment.setAmount(120);
-        payment.setDescription("خرید پاور بانک برای تست");
-        payment.setMobile("09168380639");
+        payment.setDescription("خرید به جهت تست");
+        payment.setMobile("09161234567");
         payment.setCallbackURL("return://zarinpalpayment");
         payment.isZarinGateEnable(true);
 
